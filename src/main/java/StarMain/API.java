@@ -15,7 +15,7 @@ public class API {
             System.out.println("path : " + path);
             System.out.println("searchquery : "+ searchquery);
         	
-        	String urlString = "https://swapi.dev/api/" + path + "/";
+        	String urlString = "https://swapi.tech/api/" + path + "/";
             if (searchquery != null && !searchquery.isEmpty()) {
                 urlString += "?search=" + searchquery;
             }

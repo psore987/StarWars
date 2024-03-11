@@ -10,24 +10,24 @@ public class Printer {
         for (int i = 0; i < planetresults.length(); i++) {
             // Extraction des détails d'une planète
             JSONObject planet = planetresults.getJSONObject(i);
-            System.out.println("Planet : " + planet.getString("name"));
-            System.out.println("Rotation Period : " + planet.getString("rotation_period"));
-            System.out.println("Orbital Period : " + planet.getString("orbital_period"));
-            System.out.println("Diameter : " + planet.getString("diameter"));
-            System.out.println("Gravity : " + planet.getString("gravity"));
-            System.out.println("Terrain : " + planet.getString("terrain"));
-            System.out.println("Surface water : " + planet.getString("surface_water"));
-            System.out.println("Population : " + planet.getString("population"));
+            System.out.println("Planet : " + planet.getJSONObject("properties").getString("name"));
+            System.out.println("Rotation Period : " + planet.getJSONObject("properties").getString("rotation_period"));
+            System.out.println("Orbital Period : " + planet.getJSONObject("properties").getString("orbital_period"));
+            System.out.println("Diameter : " + planet.getJSONObject("properties").getString("diameter"));
+            System.out.println("Gravity : " + planet.getJSONObject("properties").getString("gravity"));
+            System.out.println("Terrain : " + planet.getJSONObject("properties").getString("terrain"));
+            System.out.println("Surface water : " + planet.getJSONObject("properties").getString("surface_water"));
+            System.out.println("Population : " + planet.getJSONObject("properties").getString("population"));
 
-            // Impression des résidents de la planète
-            JSONArray residents = planet.getJSONArray("residents");
-            System.out.println("\nResidents :");
-            printArrayValues(residents, "name");
-
-            // Impression des films associés à la planète
-            JSONArray films = planet.getJSONArray("films");
-            System.out.println("\nFilms :");
-            printArrayValues(films, "title");
+//            // Impression des résidents de la planète
+//            JSONArray residents = planet.getJSONArray("residents");
+//            System.out.println("\nResidents :");
+//            printArrayValues(residents, "name");
+//
+//            // Impression des films associés à la planète
+//            JSONArray films = planet.getJSONArray("films");
+//            System.out.println("\nFilms :");
+//            printArrayValues(films, "title");
 
             System.out.println("\n");
         }
