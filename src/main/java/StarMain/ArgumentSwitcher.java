@@ -25,7 +25,7 @@ public class ArgumentSwitcher {
             	  System.out.println("on a choisi 'films'");
             	jsonObject = repository.getAll("films", searchquery);
             	System.out.println("je suis arrivé ici !!!");
-                JSONArray filmresults = jsonObject.getJSONArray("results");
+                JSONArray filmresults = jsonObject.getJSONArray("result");
                 printer.printDetailsFilms(filmresults);
                 break;
             case "planets":
